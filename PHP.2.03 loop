@@ -1,0 +1,12 @@
+<?php
+
+$multiplicador = readline("Digite o número: ");
+
+echo "Tabuada do $multiplicador" , "\n";
+
+for ($i = 1; $i <= 10; $i++) {
+    $resultado = $multiplicador * $i;
+    echo "$multiplicador x $i = $resultado" , "\n";
+}
+
+?>
