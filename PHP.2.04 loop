@@ -1,0 +1,11 @@
+<?php
+
+$produtos =["Camiseta" => 49.90,
+            "Calça" => 89.90,
+            "Tênis" => 199.90];
+            
+    foreach ($produtos as $produto => $preco) {
+        echo("O produto $produto custa R$ $preco \n ");
+    }
+
+?>
