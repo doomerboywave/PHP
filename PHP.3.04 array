@@ -1,0 +1,8 @@
+<?php
+$itens = ["Arroz", "Feijão", "Leite", "Ovos"];
+$itens[2] = "Leite Desnatado";
+
+$removerUltimo = array_pop($itens);
+
+print_r($itens);
+?>
