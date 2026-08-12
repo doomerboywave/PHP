@@ -1,0 +1,7 @@
+<?php
+$notas = [7.5 , 4.0 , 9.2 , 6.8 , 8.5];
+sort($notas);
+print_r($notas);
+rsort($notas);
+print_r($notas);
+?>
