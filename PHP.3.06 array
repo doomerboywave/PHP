@@ -1,0 +1,13 @@
+<?php
+$numeros =[12,5,8,21,14,7,30,31];
+$pares = [];
+
+foreach ($numeros as $numero) {
+    if ($numero % 2 === 0) {
+        $pares[] = $numero;
+    }
+}
+
+print_r($pares);
+ 
+?>
