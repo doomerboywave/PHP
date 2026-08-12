@@ -1,0 +1,8 @@
+<?php
+
+$codigos = [102,305,404,500,200];
+
+if( in_array(404, $codigos)){
+    echo("O indice do número 404 é: " . array_search(404, $codigos));
+}
+?>
