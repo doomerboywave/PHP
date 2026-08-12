@@ -1,0 +1,10 @@
+<?php
+
+$LinguagemP = [ "Rubi" , "PHP" , "Java" , "Python", "C++"];
+echo "Primeira Linguagem: " . $LinguagemP[0] . "\n";
+echo "Segunda Linguagem: " . $LinguagemP[4] . "\n";
+
+$LinguagemP[] = "JavaScript";
+echo "Quantidade de linguagens: " . count($LinguagemP);
+
+?>
