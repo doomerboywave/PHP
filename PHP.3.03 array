@@ -1,0 +1,29 @@
+<?php
+
+//Sem usar método array.sum();
+
+$num = [10, 20, 30, 40, 50];
+$soma = 0;
+
+
+    foreach ($num as $n ) {
+	    $soma += $n;
+ 	    echo($soma . "\n");
+}
+    $media = count($num) > 0 ? $soma / count($num) : 0;
+    echo("A media é: " . $media);
+
+
+
+
+
+//Usando método array.sum();
+
+
+$num = [10, 20, 30, 40, 50];
+$soma = array_sum($num); 
+    echo("soma é: " . $soma);
+    
+$media = count($num) > 0 ? $soma / count($num) : 0;
+    echo("\nA media é: " . $media);
+?>
