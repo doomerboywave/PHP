@@ -1,0 +1,30 @@
+<?php
+
+class Produto {
+    public string $nome;
+    public float $preço;
+    public int  $qtd;
+    
+    public function calcularTotal() {
+        return $this->preço * $this->qtd;
+    } 
+    
+}
+
+$produto1 = new Produto();
+$produto1->nome = "Arroz";
+$produto1->preço = 22.50;
+$produto1->qtd = 8;
+
+$produto2 = new Produto();
+$produto2->nome = "Feijão";
+$produto2->preço = 15.80;
+$produto2->qtd = 6;
+
+echo "Produto: " . $produto1->nome . "\n" ;
+echo "Total: " . $produto1->calcularTotal() . "\n";
+
+echo "Produto: " . $produto2->nome . "\n" ;
+echo "Total: " . $produto2->calcularTotal();
+
+?>
