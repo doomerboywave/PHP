@@ -1,0 +1,42 @@
+<?php
+
+class contaBancaria {
+	private string $titular;
+	private float $saldo;
+
+	public function __construct(string $titular, float $saldoInicial = 0.0) {
+		$this -> titular = $titular;
+		$this -> saldo = $saldoInicial;
+
+	}
+
+	public function depositar(float $valor): void {
+		if($valor > 0) {
+			$this -> saldo +=  $valor;
+			echo "O deposito foi concluido" . "\n";
+		}
+
+	}
+	public function saque(float $valor): void {
+		if($valor > 0 && $valor <= $this -> saldo) {
+			$this -> saldo -= $valor;
+			echo "Saque de R$: $valor realizado" . "\n";
+		}
+	}
+
+	public function getSaldo() {
+		return $this -> saldo;
+
+	}
+}
+
+$contabancaria1 = new contaBancaria("lsumin", 1000.00);
+$contabancaria1 -> depositar(200.00);
+$contabancaria1 -> saque(200.00);
+
+echo "Saldo final: R$ " . $contabancaria1 -> getSaldo() . "\n";
+
+
+
+
+
