@@ -1,0 +1,36 @@
+<?php
+
+class Retangulo {
+    private float $largura;
+    private float $altura;
+    
+    public function __construct(float $largura, float $altura) {
+        $this->largura = $largura;
+        $this->altura = $altura;
+    }
+    
+    public function calcularArea(): float {
+        $area = $this->largura * $this->altura;
+        echo "A área é: " . $area . "\n";
+        return $area;
+    }
+    
+    public function calcularPerimetro(): float {
+        return 2 * ($this->largura + $this->altura);
+    }
+    
+    public function isQuadrado(): bool {
+        return $this->altura === $this->largura;
+    }
+}
+
+$meuRetangulo = new Retangulo(6.00, 2.00);
+
+$meuRetangulo->calcularArea(); 
+echo "O perímetro é: " . $meuRetangulo->calcularPerimetro() . "\n";
+
+if ($meuRetangulo->isQuadrado()) {
+    echo "É um quadrado!";
+} else {
+    echo "Não é um quadrado!";
+}
