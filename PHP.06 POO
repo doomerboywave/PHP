@@ -1,0 +1,18 @@
+<?php
+
+class AcessoSistema {
+	private static $totalAcessos = 0;
+
+	public function __construct() {
+		self::$totalAcessos++;
+	}
+	public static function getTotalAcessos(): int{
+		return self::$totalAcessos;
+	}
+}
+
+$acesso1 = new AcessoSistema();
+$acesso1 = new AcessoSistema();
+$acesso1 = new AcessoSistema();
+
+echo AcessoSistema::getTotalAcessos();
