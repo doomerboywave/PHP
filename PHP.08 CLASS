@@ -1,0 +1,59 @@
+<?php
+class calculadora {
+	public int $num1;
+	public int $num2;
+
+	public function __construct(int $num1, int $num2) {
+		$this -> num1 = $num1;
+		$this -> num2 = $num2;
+	}
+	public function somar() {
+		$soma = $this -> num1 + $this -> num2;
+		echo("A soma dos dois mumeros é igual a " . $soma . "\n");
+	}
+	public function subtrair() {
+		$sub = $this -> num1 - $this -> num2;
+		echo("A subtração dos dois mumeros é igual a " . $sub . "\n");
+	}
+	public function multiplicar() {
+		$mult = $this -> num1 * $this -> num2;
+		echo("A multiplicação dos dois mumeros é igual a " . $mult . "\n");
+	}
+	public function dividir(): void {
+		if ($this->num2 === 0) {
+			echo "Não é possível dividir por zero.\n";
+			return;
+		}
+		$div = $this->num1 / $this->num2;
+		echo "A divisão dos dois números é igual a " . $div . "\n";
+	}
+}
+
+$n1 = (int) readline("Informe o primeiro numero: ");
+$n2 = (int) readline("Informe o segundo numero: ");
+
+$calc = new Calculadora($n1, $n2);
+$calc->somar();
+$calc->subtrair();
+$calc->multiplicar();
+$calc->dividir();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
