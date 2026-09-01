@@ -1,0 +1,38 @@
+<?php
+
+class lampada {
+	public bool $estaLigada = false;
+	public bool $estaDesligada = true;
+
+	public function construct(string $ligada, string $desligada, string $observar) {
+	$this-> estaLigada = false;
+	$this-> estaDesligada = true;
+
+	}
+	public function ligada() {
+		$this -> estaLigada = true;
+		$this -> estaDesligada = false;
+		echo "A lampada está ligada \n";
+	}
+
+	public function desligada() {
+		$this -> estaDesligada = true;
+		$this -> estaLigada - false;
+		echo "A lampada está desligada \n";
+	}
+	public function observar() {
+		if($this -> estaLigada ) {
+			echo "A luz esta brilhando \n";
+			if($this -> estaDesligada) {
+				echo "Estamos no escuro";
+			}
+		}
+	}
+
+}
+
+$lampada1 = new lampada();
+
+$lampada1 -> ligada();
+$lampada1 -> desligada();
+$lampada1 -> observar();
