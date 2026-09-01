@@ -1,0 +1,26 @@
+<?php
+
+class livro{
+    public $titulo;
+    public $autor;
+    public $paginas;
+    
+}
+
+$livro1 = new livro();
+$livro1 -> titulo = "Coraline";
+$livro1 -> autor = "Neil Gaiman";
+$livro1 -> paginas = 224;
+
+
+$livro2 = new livro();
+$livro2 -> titulo = "Sandman";
+$livro2 -> autor = "Neil Gaiman";
+$livro2 -> paginas = 2000;
+
+echo "============================================================";
+echo "\n O livro " . $livro1 -> titulo . " é " . $livro2 -> titulo;
+echo "\n são do mesmo autor " . "'" . $livro1 -> autor . "'";
+echo "\n O livro 1 contém " . $livro1 -> paginas . " páginas e o segundo " . $livro2 -> paginas . "\n";
+echo "============================================================";
+?>
